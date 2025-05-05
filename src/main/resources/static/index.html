@@ -8,11 +8,29 @@
 <body class="bg-light">
 <div class="container mt-5">
   <h1 class="mb-4 text-center">📝 Todo List</h1>
+  
   <div class="input-group mb-3">
     <input id="newTitle" class="form-control me-2" placeholder="Nom de la tâche">
     <input id="newDesc" class="form-control me-2" placeholder="Description">
     <button class="btn btn-primary" onclick="addTodo()">Ajouter</button>
   </div>
+  
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input id="searchInput" class="form-control" placeholder="Rechercher...">
+        <button class="btn btn-outline-secondary" onclick="searchTodos()">🔍</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="btn-group w-100" role="group">
+        <button class="btn btn-outline-secondary active" id="btnAll" onclick="filterTodos('all')">Tous</button>
+        <button class="btn btn-outline-secondary" id="btnActive" onclick="filterTodos('active')">En cours</button>
+        <button class="btn btn-outline-secondary" id="btnCompleted" onclick="filterTodos('completed')">Terminées</button>
+      </div>
+    </div>
+  </div>
+  
   <ul class="list-group" id="todoList"></ul>
 </div>
 
